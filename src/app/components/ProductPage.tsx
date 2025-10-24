@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import ReactMarkdown from 'react-markdown';
@@ -21,9 +21,12 @@ interface ProductPageProps {
   };
   description: string;
   images?: string[];
+  detailedSpecs?: Array<{ specification: string; details: string }>;
 }
 
-export default function ProductPage({ name, tonnage, power, features, specs, description, images = [] }: ProductPageProps) {
+export default function ProductPage({ name, tonnage, power, features, specs, description, images = [], detailedSpecs }: ProductPageProps) {
+  const [activeTab, setActiveTab] = useState<'description' | 'specifications'>('description');
+
   return (
     <div className="min-h-screen bg-slate-50">
       <Navbar />
@@ -120,33 +123,102 @@ export default function ProductPage({ name, tonnage, power, features, specs, des
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-black text-slate-900 mb-6">Key Features</h2>
-              <div className="space-y-4">
-                {features.map((feature, idx) => (
-                  <div key={idx} className="flex items-start">
-                    <Check className="w-6 h-6 text-cyan-500 mr-4 flex-shrink-0 mt-0.5" />
-                    <span className="text-lg text-slate-700">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h2 className="text-3xl font-black text-slate-900 mb-6">About This Model</h2>
-              <div className="prose prose-lg prose-slate max-w-none">
-                {description ? (
-                  <ReactMarkdown>{description}</ReactMarkdown>
-                ) : (
-                  <p className="text-slate-600 italic">
-                    Detailed description coming soon. This Rippa excavator features Kubota diesel reliability
-                    and is engineered for Pacific Northwest conditions.
-                  </p>
-                )}
-              </div>
-            </div>
+          {/* Tab Navigation */}
+          <div className="flex justify-center mb-8 border-b border-slate-200">
+            <button
+              onClick={() => setActiveTab('description')}
+              className={`px-8 py-4 font-bold text-lg transition-all relative ${
+                activeTab === 'description'
+                  ? 'text-cyan-600'
+                  : 'text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              Description
+              {activeTab === 'description' && (
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 to-blue-600" />
+              )}
+            </button>
+            <button
+              onClick={() => setActiveTab('specifications')}
+              className={`px-8 py-4 font-bold text-lg transition-all relative ${
+                activeTab === 'specifications'
+                  ? 'text-cyan-600'
+                  : 'text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              Technical Specifications
+              {activeTab === 'specifications' && (
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 to-blue-600" />
+              )}
+            </button>
           </div>
+
+          {/* Tab Content */}
+          {activeTab === 'description' ? (
+            <div className="grid lg:grid-cols-2 gap-12">
+              <div>
+                <h2 className="text-3xl font-black text-slate-900 mb-6">Key Features</h2>
+                <div className="space-y-4">
+                  {features.map((feature, idx) => (
+                    <div key={idx} className="flex items-start">
+                      <Check className="w-6 h-6 text-cyan-500 mr-4 flex-shrink-0 mt-0.5" />
+                      <span className="text-lg text-slate-700">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-black text-slate-900 mb-6">About This Model</h2>
+                <div className="prose prose-lg prose-slate max-w-none">
+                  {description ? (
+                    <ReactMarkdown>{description}</ReactMarkdown>
+                  ) : (
+                    <p className="text-slate-600 italic">
+                      Detailed description coming soon. This Rippa excavator features Kubota diesel reliability
+                      and is engineered for Pacific Northwest conditions.
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-black text-slate-900 mb-8 text-center">Technical Specifications</h2>
+              {detailedSpecs && detailedSpecs.length > 0 ? (
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-slate-200">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-slate-100">
+                        <th className="text-left py-4 px-6 font-black text-slate-900 text-lg border-b border-slate-200">
+                          Specification
+                        </th>
+                        <th className="text-left py-4 px-6 font-black text-slate-900 text-lg border-b border-slate-200">
+                          Details
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {detailedSpecs.map((spec, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="py-4 px-6 font-semibold text-slate-700 border-b border-slate-200">
+                            {spec.specification}
+                          </td>
+                          <td className="py-4 px-6 text-slate-600 border-b border-slate-200">
+                            {spec.details}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ) : (
+                <p className="text-center text-slate-600 italic">
+                  Detailed specifications coming soon. Contact us for complete technical data.
+                </p>
+              )}
+            </div>
+          )}
         </div>
       </section>
 

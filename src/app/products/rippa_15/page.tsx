@@ -31,7 +31,28 @@ export default async function RippaR15Page() {
       }}
       description={description}
       images={[]}
+      detailedSpecs={[
+        { specification: "Operating Weight", details: "3,300 lbs (1.5 tonnes)" },
+        { specification: "Engine", details: "Kubota D722 Diesel" },
+        { specification: "Max Horsepower", details: "14 HP" },
+        { specification: "Track Type", details: "Telescopic Rubber Tracks" },
+        { specification: "Track Width Adjustment", details: "35\" – 46.9\"" },
+        { specification: "Travel Speed (Low/High)", details: "1.5 mph / 2.8 mph" },
+        { specification: "Maximum Digging Force", details: "10.4 kN" },
+        { specification: "Maximum Digging Depth", details: "71\"" },
+        { specification: "Maximum Digging Height", details: "120\"" },
+        { specification: "Maximum Dumping Height", details: "90\"" },
+        { specification: "Blade Width", details: "35\" – 47\"" },
+        { specification: "Boom Length", details: "58\"" },
+        { specification: "Arm Length", details: "31\"" },
+        { specification: "Main Pump Flow", details: "6.6 gal/min" },
+        { specification: "Cooling System", details: "Liquid-cooled" },
+        { specification: "Fuel Tank Capacity", details: "3.5 gal" },
+        { specification: "Counterweight Ground Clearance", details: "17\"" },
+      ]}
     />
   );
 }
+
+
 
