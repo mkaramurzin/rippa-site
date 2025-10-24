@@ -31,6 +31,28 @@ export default async function RippaR32ProPage() {
       }}
       description={description}
       images={[]}
+      detailedSpecs={[
+        { specification: "Operating Weight", details: "7,055 lbs (3,200 kg)" },
+        { specification: "Engine", details: "Kubota V1505, 4-Cylinder Diesel" },
+        { specification: "Max Horsepower", details: "25 HP (18.5 kW)" },
+        { specification: "Bucket Capacity", details: "0.08 m³" },
+        { specification: "Maximum Digging Depth", details: "111.3\" (2,827 mm)" },
+        { specification: "Maximum Digging Reach", details: "190.2\" (4,831 mm)" },
+        { specification: "Maximum Digging Height", details: "189\" (4,800 mm)" },
+        { specification: "Maximum Dumping Height", details: "135\" (3,430 mm)" },
+        { specification: "Travel Speed (Low/High)", details: "1.1 - 1.7 mph (1.8 - 2.8 km/h)" },
+        { specification: "Swing Speed", details: "9.5 rpm" },
+        { specification: "Track Width", details: "19.7\" (500 mm)" },
+        { specification: "Ground Pressure", details: "7.5 psi (0.52 bar)" },
+        { specification: "Transport Length", details: "17.8 ft (5.4 m)" },
+        { specification: "Transport Width", details: "7.2 ft (2.2 m)" },
+        { specification: "Transport Height", details: "10.5 ft (3.2 m)" },
+        { specification: "Hydraulic Flow", details: "21.1 gpm (80 lpm)" },
+        { specification: "Fuel Tank Capacity", details: "13.2 gal (50 L)" },
+        { specification: "Cooling System", details: "Liquid-cooled" },
+        { specification: "Blade Width", details: "66\" (1,680 mm)" },
+        { specification: "Operator Features", details: "Climate-controlled cab with LCD display" },
+      ]}
     />
   );
 }

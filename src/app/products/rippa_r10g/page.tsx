@@ -31,6 +31,29 @@ export default async function RippaR10GPage() {
       }}
       description={description}
       images={[]}
+      detailedSpecs={[
+        { specification: "Operating Weight", details: "2,200 lbs (998 kg)" },
+        { specification: "Engine", details: "Briggs & Stratton Vanguard Gasoline" },
+        { specification: "Max Horsepower", details: "10 HP (7.5 kW)" },
+        { specification: "Fuel Type", details: "Gasoline (Clean Indoor Operation)" },
+        { specification: "Cooling System", details: "Air-cooled" },
+        { specification: "Bucket Capacity", details: "0.014 m³" },
+        { specification: "Maximum Digging Depth", details: "72\" (1.83 m)" },
+        { specification: "Maximum Digging Reach", details: "127\" (3.23 m)" },
+        { specification: "Maximum Digging Height", details: "119\" (3.02 m)" },
+        { specification: "Maximum Dumping Height", details: "88\" (2.25 m)" },
+        { specification: "Travel Speed", details: "0 - 0.93 mph (1.5 km/h)" },
+        { specification: "Gradeability", details: "30%" },
+        { specification: "Ground Pressure", details: "25.53 kPa" },
+        { specification: "Track Extension Range", details: "36\" - 48\" (912-1212 mm)" },
+        { specification: "Transport Length", details: "8.0 ft (2,430 mm)" },
+        { specification: "Transport Width", details: "3.0 ft (912 mm)" },
+        { specification: "Transport Height", details: "7.2 ft (2,201 mm)" },
+        { specification: "Boom Length", details: "58\" (1,477 mm)" },
+        { specification: "Arm Length", details: "31\" (800 mm)" },
+        { specification: "Bulldozer Blade Width", details: "36\" - 48\" (912-1212 mm)" },
+        { specification: "Ideal Use Cases", details: "Indoor demolition, basements, rental fleets" },
+      ]}
     />
   );
 }
