@@ -38,9 +38,9 @@ export default function Navbar() {
               <Phone className="w-4 h-4 mr-2" />
               (425) 560-6009
             </a>
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2.5 rounded-lg font-bold hover:shadow-lg hover:shadow-cyan-500/50 transition-all hover:scale-105">
+            <Link href="/quote" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2.5 rounded-lg font-bold hover:shadow-lg hover:shadow-cyan-500/50 transition-all hover:scale-105">
               Request Quote
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -62,9 +62,9 @@ export default function Navbar() {
               <Phone className="w-4 h-4 inline mr-2" />
               (425) 560-6009
             </a>
-            <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-bold">
+            <Link href="/quote" className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-bold">
               Request Quote
-            </button>
+            </Link>
           </div>
         </div>
       )}

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin, ArrowRight, Check, Star, Wrench, Shield, Clock, Users, Zap, Award, TrendingUp, Package } from 'lucide-react';
 import Link from 'next/link';
+import Footer from './components/Footer';
 
 const VolkEquipmentSite = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -166,9 +167,9 @@ const VolkEquipmentSite = () => {
                 <Phone className="w-4 h-4 mr-2" />
                 (425) 560-6009
               </a>
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2.5 rounded-lg font-bold hover:shadow-lg hover:shadow-cyan-500/50 transition-all hover:scale-105">
+              <Link href="/quote" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2.5 rounded-lg font-bold hover:shadow-lg hover:shadow-cyan-500/50 transition-all hover:scale-105">
                 Request Quote
-              </button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -190,9 +191,9 @@ const VolkEquipmentSite = () => {
                 <Phone className="w-4 h-4 inline mr-2" />
                 (425) 560-6009
               </a>
-              <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-bold">
+              <Link href="/quote" className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-bold">
                 Request Quote
-              </button>
+              </Link>
             </div>
           </div>
         )}
@@ -233,13 +234,13 @@ const VolkEquipmentSite = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <button className="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all hover:scale-105 flex items-center justify-center">
+              <Link href="/models" className="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all hover:scale-105 flex items-center justify-center">
                 Explore Models
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="bg-slate-800 border-2 border-cyan-500 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-700 transition-all">
-                Schedule Demo
-              </button>
+              </Link>
+              <Link href="/quote" className="bg-slate-800 border-2 border-cyan-500 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-700 transition-all">
+                Request Quote
+              </Link>
             </div>
 
             {/* Trust Badges */}
@@ -494,27 +495,27 @@ const VolkEquipmentSite = () => {
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-16">
-            <div className="bg-slate-800 border-2 border-slate-700 rounded-2xl p-8 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/20 transition-all group">
+            <Link href="/quote" className="bg-slate-800 border-2 border-slate-700 rounded-2xl p-8 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/20 transition-all group">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                 <Mail className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-black text-xl mb-3">Request Quote</h3>
               <p className="text-slate-400 text-sm mb-6">Detailed pricing in under 24 hours</p>
-              <button className="text-cyan-400 font-bold hover:text-cyan-300 transition-colors flex items-center justify-center mx-auto">
+              <div className="text-cyan-400 font-bold hover:text-cyan-300 transition-colors flex items-center justify-center mx-auto">
                 Get Started <ArrowRight className="ml-2 w-4 h-4" />
-              </button>
-            </div>
+              </div>
+            </Link>
             
-            <div className="bg-slate-800 border-2 border-slate-700 rounded-2xl p-8 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/20 transition-all group">
+            <Link href="/quote" className="bg-slate-800 border-2 border-slate-700 rounded-2xl p-8 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/20 transition-all group">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-black text-xl mb-3">Schedule Demo</h3>
               <p className="text-slate-400 text-sm mb-6">See Rippa machines in action</p>
-              <button className="text-cyan-400 font-bold hover:text-cyan-300 transition-colors flex items-center justify-center mx-auto">
+              <div className="text-cyan-400 font-bold hover:text-cyan-300 transition-colors flex items-center justify-center mx-auto">
                 Book Now <ArrowRight className="ml-2 w-4 h-4" />
-              </button>
-            </div>
+              </div>
+            </Link>
             
             <div className="bg-slate-800 border-2 border-slate-700 rounded-2xl p-8 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-500/20 transition-all group">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
@@ -549,93 +550,7 @@ const VolkEquipmentSite = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-slate-950 text-slate-400 py-16 border-t border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                  <div className="text-white font-bold text-xl">V</div>
-                </div>
-                <div>
-                  <div className="text-lg font-bold text-white">VOLK EQUIPMENT</div>
-                  <div className="text-xs text-cyan-400">Official Rippa Dealer</div>
-                </div>
-              </div>
-              <p className="text-sm mb-4 text-slate-500">
-                Your trusted source for premium Kubota-powered mini excavators in the Pacific Northwest.
-              </p>
-              <div className="text-sm text-slate-500">
-                <div>Sammamish, WA 98074</div>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-white mb-6 text-sm uppercase tracking-wider">Equipment</h4>
-              <ul className="space-y-3 text-sm">
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">Mini Excavators</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">Compact Models</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">Heavy-Duty Models</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">Attachments</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">Compare Models</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-white mb-6 text-sm uppercase tracking-wider">Support</h4>
-              <ul className="space-y-3 text-sm">
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">Financing Options</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">Warranty Information</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">Parts & Service</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">Training Resources</a></li>
-                <li><a href="#" className="hover:text-cyan-400 transition-colors">FAQ</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-white mb-6 text-sm uppercase tracking-wider">Get In Touch</h4>
-              <ul className="space-y-4 text-sm">
-                <li>
-                  <a href="tel:4255606009" className="flex items-center hover:text-cyan-400 transition-colors group">
-                    <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center mr-3 group-hover:bg-slate-700 transition-colors">
-                      <Phone className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <div className="text-xs text-slate-500">Call Us</div>
-                      <div className="font-semibold text-white">(425) 560-6009</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:volkequipment@gmail.com" className="flex items-center hover:text-cyan-400 transition-colors group">
-                    <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center mr-3 group-hover:bg-slate-700 transition-colors">
-                      <Mail className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <div className="text-xs text-slate-500">Email Us</div>
-                      <div className="font-semibold text-white text-xs">volkequipment@gmail.com</div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-slate-800 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="text-sm text-slate-500">
-                © 2024 Volk Equipment LLC. All rights reserved.
-              </div>
-              <div className="flex gap-6 text-sm">
-                <a href="#" className="hover:text-cyan-400 transition-colors">Privacy Policy</a>
-                <a href="#" className="hover:text-cyan-400 transition-colors">Terms of Service</a>
-                <a href="#" className="hover:text-cyan-400 transition-colors">Warranty Info</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

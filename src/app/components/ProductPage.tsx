@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import QuoteRequestModal from './QuoteRequestModal';
 import ReactMarkdown from 'react-markdown';
 import { ArrowLeft, Check, Package, Wrench } from 'lucide-react';
 import Link from 'next/link';
@@ -26,10 +27,16 @@ interface ProductPageProps {
 
 export default function ProductPage({ name, tonnage, power, features, specs, description, images = [], detailedSpecs }: ProductPageProps) {
   const [activeTab, setActiveTab] = useState<'description' | 'specifications'>('description');
-
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+ 
   return (
     <div className="min-h-screen bg-slate-50">
       <Navbar />
+      <QuoteRequestModal 
+        isOpen={isQuoteModalOpen}
+        onClose={() => setIsQuoteModalOpen(false)}
+        excavatorModel={name}
+      />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -72,9 +79,12 @@ export default function ProductPage({ name, tonnage, power, features, specs, des
                 </div>
               </div>
 
-              <a href="tel:4255606009" className="inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all hover:scale-105">
+              <button 
+                onClick={() => setIsQuoteModalOpen(true)}
+                className="inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all hover:scale-105"
+              >
                 Request Quote
-              </a>
+              </button>
             </div>
 
             <div className="relative">
@@ -257,9 +267,12 @@ export default function ProductPage({ name, tonnage, power, features, specs, des
             <a href="tel:4255606009" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all hover:scale-105">
               Call (425) 560-6009
             </a>
-            <a href="mailto:volkequipment@gmail.com" className="bg-slate-800 border-2 border-cyan-500 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-700 transition-all">
+            <button 
+              onClick={() => setIsQuoteModalOpen(true)}
+              className="bg-slate-800 border-2 border-cyan-500 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-700 transition-all"
+            >
               Request Quote
-            </a>
+            </button>
           </div>
         </div>
       </section>
