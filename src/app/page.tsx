@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin, ArrowRight, Check, Star, Wrench, Shield, Clock, Users, Zap, Award, TrendingUp, Package } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Footer from './components/Footer';
 
 const VolkEquipmentSite = () => {
@@ -24,7 +25,8 @@ const VolkEquipmentSite = () => {
       tonnage: "1.0 Ton",
       power: "7.2 kW",
       features: ["Ultra-compact design", "Diesel efficiency", "Perfect for tight spaces"],
-      specs: { depth: "1.8m", reach: "3.2m", width: "0.78m" }
+      specs: { depth: "1.8m", reach: "3.2m", width: "0.78m" },
+      image: "/products/rippa_r10d/IMG_7771.jpg"
     },
     {
       name: "Rippa R10G",
@@ -32,7 +34,8 @@ const VolkEquipmentSite = () => {
       tonnage: "1.0 Ton",
       power: "7.5 kW",
       features: ["Gas-powered option", "Zero tail swing", "Indoor/outdoor use"],
-      specs: { depth: "1.8m", reach: "3.2m", width: "0.78m" }
+      specs: { depth: "1.8m", reach: "3.2m", width: "0.78m" },
+      image: "/products/rippa_r10g/IMG_7774.jpg"
     },
     {
       name: "Rippa R13 PRO",
@@ -40,7 +43,8 @@ const VolkEquipmentSite = () => {
       tonnage: "1.3 Ton",
       power: "10.5 kW",
       features: ["Enhanced hydraulics", "Expandable tracks", "Superior stability"],
-      specs: { depth: "2.3m", reach: "3.8m", width: "1.0m" }
+      specs: { depth: "2.3m", reach: "3.8m", width: "1.0m" },
+      image: "/products/rippa_r13_pro/IMG_7824.jpg"
     },
     {
       name: "Rippa R15",
@@ -48,7 +52,8 @@ const VolkEquipmentSite = () => {
       tonnage: "1.5 Ton",
       power: "12.8 kW",
       features: ["Versatile workhorse", "Optimized fuel economy", "Extended reach"],
-      specs: { depth: "2.5m", reach: "4.2m", width: "1.2m" }
+      specs: { depth: "2.5m", reach: "4.2m", width: "1.2m" },
+      image: "/products/rippa_15/IMG_7791.jpg"
     },
     {
       name: "Rippa R18 PRO",
@@ -56,7 +61,8 @@ const VolkEquipmentSite = () => {
       tonnage: "1.8 Ton",
       power: "15.2 kW",
       features: ["Professional grade", "Advanced boom control", "All-day comfort"],
-      specs: { depth: "2.7m", reach: "4.6m", width: "1.45m" }
+      specs: { depth: "2.7m", reach: "4.6m", width: "1.45m" },
+      image: "/products/rippa_r18_pro/IMG_7815.jpg"
     },
     {
       name: "Rippa R22 PRO",
@@ -64,7 +70,8 @@ const VolkEquipmentSite = () => {
       tonnage: "2.2 Ton", 
       power: "18.0 kW",
       features: ["Most popular model", "Maximum versatility", "Heavy-duty performance"],
-      specs: { depth: "2.8m", reach: "4.8m", width: "1.5m" }
+      specs: { depth: "2.8m", reach: "4.8m", width: "1.5m" },
+      image: "/products/rippa_r22_pro/IMG_7836.jpg"
     },
     {
       name: "Rippa R32 PRO",
@@ -72,7 +79,8 @@ const VolkEquipmentSite = () => {
       tonnage: "3.2 Ton",
       power: "19.5 kW",
       features: ["Maximum digging force", "Cast swing boom", "All-terrain capable"],
-      specs: { depth: "3.2m", reach: "5.2m", width: "1.7m" }
+      specs: { depth: "3.2m", reach: "5.2m", width: "1.7m" },
+      image: "/products/rippa_32_pro/IMG_7856.jpg"
     }
   ];
 
@@ -128,10 +136,10 @@ const VolkEquipmentSite = () => {
   ];
 
   const industries = [
-    { name: "Landscaping & Grounds", icon: "🌳" },
-    { name: "Construction & Excavation", icon: "🏗️" },
-    { name: "Agriculture & Farming", icon: "🚜" },
-    { name: "Utilities & Municipal", icon: "⚡" }
+    { name: "Landscaping & Grounds", icon: "🌳", image: "/ai-photography/industry-landscaping.png" },
+    { name: "Construction & Excavation", icon: "🏗️", image: "/ai-photography/industry-construction.png" },
+    { name: "Agriculture & Farming", icon: "🚜", image: "/ai-photography/industry-agriculture.png" },
+    { name: "Utilities & Municipal", icon: "⚡", image: "/ai-photography/industry-utilities.png" }
   ];
 
   useEffect(() => {
@@ -201,18 +209,21 @@ const VolkEquipmentSite = () => {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
-        {/* Animated background grid */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-600/20"></div>
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)',
-            backgroundSize: '50px 50px'
-          }}></div>
+        {/* AI Background Image */}
+        <div className="absolute inset-0">
+          <Image 
+            src="/ai-photography/hero-background-pnw.png"
+            alt="Mini excavator in Pacific Northwest"
+            fill
+            className="object-cover opacity-60"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-slate-800/50 to-slate-900/60"></div>
         </div>
 
         {/* Glowing orb effect */}
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-5xl mx-auto">
@@ -303,60 +314,66 @@ const VolkEquipmentSite = () => {
               <div 
                 key={idx}
                 onClick={() => setActiveModel(idx)}
-                className={`relative bg-white rounded-2xl p-8 border-2 transition-all cursor-pointer hover:shadow-2xl ${
+                className={`relative bg-white rounded-2xl overflow-hidden border-2 transition-all cursor-pointer hover:shadow-2xl ${
                   activeModel === idx 
                     ? 'border-cyan-500 shadow-xl shadow-cyan-500/20 scale-105' 
                     : 'border-slate-200 hover:border-cyan-300'
                 }`}
               >
-                <div className="absolute top-4 right-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
-                    <Wrench className="w-6 h-6 text-white" />
-                  </div>
+                {/* Product Image */}
+                <div className="relative w-full aspect-[16/10] bg-gradient-to-br from-slate-50 to-white">
+                  <Image 
+                    src={model.image}
+                    alt={model.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 
-                <div className="mb-6">
-                  <div className="text-sm font-bold text-cyan-600 mb-2">{model.tonnage}</div>
-                  <h3 className="text-2xl font-black text-slate-900 mb-2">{model.name}</h3>
-                  <div className="text-slate-600 text-sm font-semibold">Power: {model.power}</div>
-                </div>
+                <div className="p-8">
+                  <div className="mb-6">
+                    <div className="text-sm font-bold text-cyan-600 mb-2">{model.tonnage}</div>
+                    <h3 className="text-2xl font-black text-slate-900 mb-2">{model.name}</h3>
+                    <div className="text-slate-600 text-sm font-semibold">Power: {model.power}</div>
+                  </div>
 
-                <div className="space-y-3 mb-6">
-                  {model.features.map((feature, i) => (
-                    <div key={i} className="flex items-start">
-                      <Check className="w-5 h-5 text-cyan-500 mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700">{feature}</span>
-                    </div>
-                  ))}
-                </div>
+                  <div className="space-y-3 mb-6">
+                    {model.features.map((feature, i) => (
+                      <div key={i} className="flex items-start">
+                        <Check className="w-5 h-5 text-cyan-500 mr-3 flex-shrink-0 mt-0.5" />
+                        <span className="text-slate-700">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
 
-                <div className="bg-slate-50 rounded-xl p-4 mb-6">
-                  <div className="grid grid-cols-3 gap-4 text-center">
-                    <div>
-                      <div className="text-lg font-black text-slate-900">{model.specs.depth}</div>
-                      <div className="text-xs text-slate-600">Dig Depth</div>
-                    </div>
-                    <div>
-                      <div className="text-lg font-black text-slate-900">{model.specs.reach}</div>
-                      <div className="text-xs text-slate-600">Max Reach</div>
-                    </div>
-                    <div>
-                      <div className="text-lg font-black text-slate-900">{model.specs.width}</div>
-                      <div className="text-xs text-slate-600">Width</div>
+                  <div className="bg-slate-50 rounded-xl p-4 mb-6">
+                    <div className="grid grid-cols-3 gap-4 text-center">
+                      <div>
+                        <div className="text-lg font-black text-slate-900">{model.specs.depth}</div>
+                        <div className="text-xs text-slate-600">Dig Depth</div>
+                      </div>
+                      <div>
+                        <div className="text-lg font-black text-slate-900">{model.specs.reach}</div>
+                        <div className="text-xs text-slate-600">Max Reach</div>
+                      </div>
+                      <div>
+                        <div className="text-lg font-black text-slate-900">{model.specs.width}</div>
+                        <div className="text-xs text-slate-600">Width</div>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <Link 
-                  href={`/products/${model.slug}`}
-                  className={`block w-full py-3 rounded-xl font-bold transition-all text-center ${
-                    activeModel === idx
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/30'
-                      : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                  }`}
-                >
-                  {activeModel === idx ? 'View Full Details' : 'View Details'}
-                </Link>
+                  <Link 
+                    href={`/products/${model.slug}`}
+                    className={`block w-full py-3 rounded-xl font-bold transition-all text-center ${
+                      activeModel === idx
+                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/30'
+                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    }`}
+                  >
+                    {activeModel === idx ? 'View Full Details' : 'View Details'}
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
@@ -413,15 +430,18 @@ const VolkEquipmentSite = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, idx) => (
-              <div key={idx} className="group bg-white rounded-2xl p-8 border-2 border-slate-200 hover:border-cyan-500 hover:shadow-xl transition-all cursor-pointer">
-                <div className="text-5xl mb-4">{industry.icon}</div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">{industry.name}</h3>
-                <p className="text-slate-600 text-sm mb-4">
-                  Equipment solutions tailored for your industry demands
-                </p>
-                <div className="flex items-center text-cyan-600 font-bold text-sm group-hover:translate-x-2 transition-transform">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
+              <div key={idx} className="group bg-white rounded-2xl overflow-hidden border-2 border-slate-200 hover:border-cyan-500 hover:shadow-xl transition-all">
+                {/* AI-Generated Industry Image */}
+                <div className="relative w-full aspect-[4/3] overflow-hidden">
+                  <Image 
+                    src={industry.image}
+                    alt={industry.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 text-5xl drop-shadow-lg">{industry.icon}</div>
+                  <h3 className="absolute bottom-4 right-4 text-xl font-black text-white drop-shadow-lg text-right leading-tight">{industry.name}</h3>
                 </div>
               </div>
             ))}

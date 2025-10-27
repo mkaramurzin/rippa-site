@@ -88,17 +88,17 @@ export default function ProductPage({ name, tonnage, power, features, specs, des
             </div>
 
             <div className="relative">
-              <div className="aspect-[4/3] bg-slate-800/50 backdrop-blur-sm border-2 border-slate-700/50 rounded-2xl overflow-hidden">
+              <div className="relative w-full bg-white border-2 border-slate-700/50 rounded-2xl overflow-hidden">
                 {images && images.length > 0 ? (
                   <Image 
                     src={images[0]} 
                     alt={name}
                     width={800}
                     height={600}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto"
                   />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center text-slate-500">
+                  <div className="aspect-[4/3] flex items-center justify-center text-slate-500">
                     <div className="text-center">
                       <Package className="w-16 h-16 mx-auto mb-4 opacity-50" />
                       <p className="text-sm">Product image coming soon</p>
@@ -239,13 +239,13 @@ export default function ProductPage({ name, tonnage, power, features, specs, des
             <h2 className="text-3xl font-black text-slate-900 mb-8 text-center">More Views</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {images.slice(1).map((image, idx) => (
-                <div key={idx} className="aspect-[4/3] bg-white border-2 border-slate-200 rounded-xl overflow-hidden hover:border-cyan-500 transition-all">
+                <div key={idx} className="bg-white border-2 border-slate-200 rounded-xl overflow-hidden hover:border-cyan-500 transition-all">
                   <Image 
                     src={image} 
                     alt={`${name} view ${idx + 2}`}
                     width={600}
                     height={450}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto"
                   />
                 </div>
               ))}

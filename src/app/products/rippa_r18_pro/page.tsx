@@ -30,7 +30,7 @@ export default async function RippaR18ProPage() {
         width: "1.45m"
       }}
       description={description}
-      images={[]}
+      images={['/products/rippa_r18_pro/IMG_7815.jpg']}
       detailedSpecs={[
         { specification: "Operating Weight", details: "3,990 lbs (1,810 kg)" },
         { specification: "Engine", details: "Kubota D902, 3-Cylinder Diesel" },

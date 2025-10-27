@@ -30,7 +30,7 @@ export default async function RippaR32ProPage() {
         width: "1.7m"
       }}
       description={description}
-      images={[]}
+      images={['/products/rippa_32_pro/IMG_7856.jpg']}
       detailedSpecs={[
         { specification: "Operating Weight", details: "7,055 lbs (3,200 kg)" },
         { specification: "Engine", details: "Kubota V1505, 4-Cylinder Diesel" },

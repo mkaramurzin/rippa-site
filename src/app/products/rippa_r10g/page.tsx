@@ -30,7 +30,7 @@ export default async function RippaR10GPage() {
         width: "0.78m"
       }}
       description={description}
-      images={[]}
+      images={['/products/rippa_r10g/IMG_7774.jpg']}
       detailedSpecs={[
         { specification: "Operating Weight", details: "2,200 lbs (998 kg)" },
         { specification: "Engine", details: "Briggs & Stratton Vanguard Gasoline" },
