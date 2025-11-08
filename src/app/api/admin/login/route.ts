@@ -3,6 +3,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 const ADMIN_FILE_PATH = path.join(process.cwd(), 'data', 'admin.json');
+const isServerless = process.env.VERCEL === '1';
 
 // Simple password-based authentication
 export async function POST(request: NextRequest) {
@@ -11,22 +12,39 @@ export async function POST(request: NextRequest) {
 
     // Default password if file doesn't exist
     let adminData;
-    try {
-      const fileContents = await fs.readFile(ADMIN_FILE_PATH, 'utf8');
-      adminData = JSON.parse(fileContents);
-    } catch {
-      // Create default admin file
-      adminData = { password: 'admin123' }; // Change this default password!
-      await fs.writeFile(
-        ADMIN_FILE_PATH,
-        JSON.stringify(adminData, null, 2),
-        'utf8'
-      );
+    
+    if (isServerless && process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) {
+      // Try KV first
+      try {
+        const { kv } = await import('@vercel/kv');
+        adminData = await kv.get('admin-data');
+        if (!adminData) {
+          adminData = { password: process.env.ADMIN_PASSWORD || 'admin123' };
+          await kv.set('admin-data', adminData);
+        }
+      } catch (kvError) {
+        // Fallback to env var or default
+        adminData = { password: process.env.ADMIN_PASSWORD || 'admin123' };
+      }
+    } else {
+      // Local development: read from file
+      try {
+        const fileContents = await fs.readFile(ADMIN_FILE_PATH, 'utf8');
+        adminData = JSON.parse(fileContents);
+      } catch {
+        // Create default admin file
+        adminData = { password: process.env.ADMIN_PASSWORD || 'admin123' };
+        if (!isServerless) {
+          await fs.writeFile(
+            ADMIN_FILE_PATH,
+            JSON.stringify(adminData, null, 2),
+            'utf8'
+          );
+        }
+      }
     }
 
     if (password === adminData.password) {
-      // In a real app, you'd use proper session management
-      // For simplicity, we'll just return success
       return NextResponse.json({ success: true });
     } else {
       return NextResponse.json(
@@ -42,4 +60,3 @@ export async function POST(request: NextRequest) {
     );
   }
 }
-

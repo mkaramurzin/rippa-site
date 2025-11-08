@@ -96,10 +96,12 @@ export default function AdminDashboard() {
         setSaveSuccess(true);
         setTimeout(() => setSaveSuccess(false), 3000);
       } else {
-        alert('Failed to save content. Please try again.');
+        const errorData = await response.json().catch(() => ({}));
+        const errorMessage = errorData.details || errorData.error || 'Failed to save content. Please try again.';
+        alert(errorMessage);
       }
     } catch (error) {
-      alert('Error saving content. Please try again.');
+      alert('Error saving content. Please check your connection and try again.');
     } finally {
       setSaving(false);
     }

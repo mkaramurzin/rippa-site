@@ -74,6 +74,35 @@ This site includes a comprehensive admin interface that allows non-technical use
 - Check that the API route is working (`/api/content`)
 - Verify the content file exists and is valid JSON
 
+## Production Setup (Vercel)
+
+**Important:** In production on Vercel, file writes don't work. You need to set up Vercel KV for content storage:
+
+1. **Create Vercel KV Database:**
+   - Go to your Vercel Dashboard
+   - Select your project
+   - Go to the "Storage" tab
+   - Click "Create Database"
+   - Select "KV" (Key-Value)
+   - Create the database
+
+2. **Add Environment Variables:**
+   - Go to Project Settings > Environment Variables
+   - Vercel should automatically add:
+     - `KV_REST_API_URL`
+     - `KV_REST_API_TOKEN`
+   - If not, copy them from the KV database page
+
+3. **Set Admin Password (Optional):**
+   - Add `ADMIN_PASSWORD` environment variable with your desired password
+   - If not set, defaults to `admin123`
+
+4. **Redeploy:**
+   - After adding environment variables, redeploy your project
+   - The admin interface will now save content to KV storage
+
+**Note:** Content reading works without KV (reads from bundled files), but saving requires KV in production.
+
 ## Support
 
 For technical issues or questions about the admin interface, contact your developer.
