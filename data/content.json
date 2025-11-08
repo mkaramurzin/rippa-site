@@ -1,0 +1,476 @@
+{
+  "site": {
+    "companyName": "VOLK EQUIPMENT",
+    "tagline": "Official Rippa Dealer - PNW",
+    "contact": {
+      "phone": "(425) 560-6009",
+      "email": "volkequipment@gmail.com",
+      "address": "Sammamish, WA 98074"
+    },
+    "footer": {
+      "description": "Your trusted source for premium Kubota-powered mini excavators in the Pacific Northwest.",
+      "equipmentLinks": [
+        {
+          "text": "Rippa R10D",
+          "href": "/products/rippa_r10d"
+        },
+        {
+          "text": "Rippa R10G",
+          "href": "/products/rippa_r10g"
+        },
+        {
+          "text": "Rippa R13 PRO",
+          "href": "/products/rippa_r13_pro"
+        },
+        {
+          "text": "Rippa R15",
+          "href": "/products/rippa_15"
+        },
+        {
+          "text": "Rippa R18 PRO",
+          "href": "/products/rippa_r18_pro"
+        },
+        {
+          "text": "Rippa R22 PRO",
+          "href": "/products/rippa_r22_pro"
+        },
+        {
+          "text": "Rippa R32 PRO",
+          "href": "/products/rippa_32_pro"
+        }
+      ],
+      "supportLinks": [
+        {
+          "text": "Financing Options",
+          "href": "#"
+        },
+        {
+          "text": "Warranty Information",
+          "href": "#"
+        },
+        {
+          "text": "Parts & Service",
+          "href": "#"
+        },
+        {
+          "text": "Training Resources",
+          "href": "#"
+        },
+        {
+          "text": "FAQ",
+          "href": "#"
+        }
+      ],
+      "legalLinks": [
+        {
+          "text": "Privacy Policy",
+          "href": "#"
+        },
+        {
+          "text": "Terms of Service",
+          "href": "#"
+        },
+        {
+          "text": "Warranty Info",
+          "href": "#"
+        }
+      ],
+      "copyright": "© 2024 Volk Equipment LLC. All rights reserved."
+    }
+  },
+  "homepage": {
+    "hero": {
+      "badge": "OFFICIAL RIPPA DEALER • PACIFIC NORTHWEST",
+      "title": "Premium Kubota-Powered",
+      "titleHighlight": "Mini Excavators",
+      "subtitle": "Built by Rippa. Backed by Volk Equipment. Engineered for the demanding terrain and projects of the Pacific Northwest.",
+      "ctaPrimary": "Explore Models",
+      "ctaSecondary": "Request Quote",
+      "trustBadges": [
+        {
+          "text": "Kubota Diesel"
+        },
+        {
+          "text": "2-Year Warranty"
+        },
+        {
+          "text": "Local Support"
+        },
+        {
+          "text": "24/7 Tech Help"
+        }
+      ]
+    },
+    "stats": [
+      {
+        "number": "100,000+",
+        "label": "Units Delivered Globally"
+      },
+      {
+        "number": "15+",
+        "label": "Years Excellence"
+      },
+      {
+        "number": "24/7",
+        "label": "Tech Support"
+      },
+      {
+        "number": "98%",
+        "label": "Satisfaction Rate"
+      }
+    ],
+    "equipment": {
+      "badge": "RIPPA MINI EXCAVATORS",
+      "title": "Find Your",
+      "titleHighlight": "Perfect Match",
+      "subtitle": "From compact 1-ton landscapers to powerful 3-ton excavators—all featuring Kubota diesel reliability"
+    },
+    "advantages": [
+      {
+        "icon": "Zap",
+        "title": "Kubota Power Plant",
+        "description": "Every machine features legendary Kubota diesel engines—proven for fuel efficiency, longevity, and reliable performance in the toughest PNW conditions."
+      },
+      {
+        "icon": "Wrench",
+        "title": "Advanced Hydraulics",
+        "description": "Superior hydraulic systems deliver exceptional digging force and smooth operation. Hidden gear motors reduce maintenance and extend machine life."
+      },
+      {
+        "icon": "Shield",
+        "title": "Built to Last",
+        "description": "Reinforced cast swing booms, telescopic expandable tracks, and heavy-duty construction ensure your Rippa excavator works for decades, not just years."
+      },
+      {
+        "icon": "Users",
+        "title": "Local PNW Support",
+        "description": "Based in Sammamish with 48-hour response times. We understand Pacific Northwest terrain and provide dedicated service throughout WA, OR, and ID."
+      }
+    ],
+    "solutions": {
+      "title": "Built for",
+      "titleHighlight": "Every Industry",
+      "subtitle": "Specialized solutions for your specific needs",
+      "industries": [
+        {
+          "name": "Landscaping & Grounds",
+          "icon": "🌳",
+          "image": "/ai-photography/industry-landscaping.png"
+        },
+        {
+          "name": "Construction & Excavation",
+          "icon": "🏗️",
+          "image": "/ai-photography/industry-construction.png"
+        },
+        {
+          "name": "Agriculture & Farming",
+          "icon": "🚜",
+          "image": "/ai-photography/industry-agriculture.png"
+        },
+        {
+          "name": "Utilities & Municipal",
+          "icon": "⚡",
+          "image": "/ai-photography/industry-utilities.png"
+        }
+      ]
+    },
+    "testimonials": [
+      {
+        "text": "We've run three Rippa excavators for two years straight—no major issues, just routine maintenance. The Kubota engines sip fuel compared to our old machines, and the expandable tracks are a game-changer on residential properties.",
+        "author": "Jake Morrison",
+        "company": "Morrison Landscaping, Bellevue, WA",
+        "rating": 5
+      },
+      {
+        "text": "Volk Equipment didn't just sell us a machine—they helped us calculate ROI, explained every feature, and followed up monthly. That's the service level that builds long-term partnerships.",
+        "author": "Sarah Chen",
+        "company": "Chen Excavation Services, Portland, OR",
+        "rating": 5
+      },
+      {
+        "text": "The hydraulic force on these mini excavators rivals machines double the weight. We're completing trenching jobs 30% faster, which directly impacts our bottom line.",
+        "author": "David Torres",
+        "company": "Torres Utilities, Spokane, WA",
+        "rating": 5
+      }
+    ],
+    "cta": {
+      "title": "Ready to Power Up Your Fleet?",
+      "subtitle": "Get expert guidance, transparent pricing, and equipment that delivers results every single day.",
+      "features": [
+        "No-pressure consultations",
+        "Transparent fixed pricing",
+        "Same-day quotes",
+        "Local PNW service"
+      ]
+    }
+  },
+  "products": [
+    {
+      "slug": "rippa_r10d",
+      "name": "Rippa R10D",
+      "tonnage": "1.0 Ton",
+      "power": "7.2 kW",
+      "features": [
+        "Ultra-compact design",
+        "Diesel efficiency",
+        "Perfect for tight spaces"
+      ],
+      "specs": {
+        "depth": "1.8m",
+        "reach": "3.2m",
+        "width": "0.78m"
+      },
+      "image": "/products/rippa_r10d/IMG_7771.jpg",
+      "description": "",
+      "detailedSpecs": []
+    },
+    {
+      "slug": "rippa_r10g",
+      "name": "Rippa R10G",
+      "tonnage": "1.0 Ton",
+      "power": "7.5 kW",
+      "features": [
+        "Gas-powered option",
+        "Zero tail swing",
+        "Indoor/outdoor use"
+      ],
+      "specs": {
+        "depth": "1.8m",
+        "reach": "3.2m",
+        "width": "0.78m"
+      },
+      "image": "/products/rippa_r10g/IMG_7774.jpg",
+      "description": "",
+      "detailedSpecs": []
+    },
+    {
+      "slug": "rippa_r13_pro",
+      "name": "Rippa R13 PRO",
+      "tonnage": "1.3 Ton",
+      "power": "10.5 kW",
+      "features": [
+        "Enhanced hydraulics",
+        "Expandable tracks",
+        "Superior stability"
+      ],
+      "specs": {
+        "depth": "2.3m",
+        "reach": "3.8m",
+        "width": "1.0m"
+      },
+      "image": "/products/rippa_r13_pro/IMG_7824.jpg",
+      "description": "",
+      "detailedSpecs": []
+    },
+    {
+      "slug": "rippa_15",
+      "name": "Rippa R15",
+      "tonnage": "1.5 Ton",
+      "power": "12.8 kW",
+      "features": [
+        "Versatile workhorse",
+        "Optimized fuel economy",
+        "Extended reach"
+      ],
+      "specs": {
+        "depth": "2.5m",
+        "reach": "4.2m",
+        "width": "1.2m"
+      },
+      "image": "/products/rippa_15/IMG_7791.jpg",
+      "description": "",
+      "detailedSpecs": [
+        {
+          "specification": "Operating Weight",
+          "details": "3,300 lbs (1.5 tonnes)"
+        },
+        {
+          "specification": "Engine",
+          "details": "Kubota D722 Diesel"
+        },
+        {
+          "specification": "Max Horsepower",
+          "details": "14 HP"
+        },
+        {
+          "specification": "Track Type",
+          "details": "Telescopic Rubber Tracks"
+        },
+        {
+          "specification": "Track Width Adjustment",
+          "details": "35\" – 46.9\""
+        },
+        {
+          "specification": "Travel Speed (Low/High)",
+          "details": "1.5 mph / 2.8 mph"
+        },
+        {
+          "specification": "Maximum Digging Force",
+          "details": "10.4 kN"
+        },
+        {
+          "specification": "Maximum Digging Depth",
+          "details": "71\""
+        },
+        {
+          "specification": "Maximum Digging Height",
+          "details": "120\""
+        },
+        {
+          "specification": "Maximum Dumping Height",
+          "details": "90\""
+        },
+        {
+          "specification": "Blade Width",
+          "details": "35\" – 47\""
+        },
+        {
+          "specification": "Boom Length",
+          "details": "58\""
+        },
+        {
+          "specification": "Arm Length",
+          "details": "31\""
+        },
+        {
+          "specification": "Main Pump Flow",
+          "details": "6.6 gal/min"
+        },
+        {
+          "specification": "Cooling System",
+          "details": "Liquid-cooled"
+        },
+        {
+          "specification": "Fuel Tank Capacity",
+          "details": "3.5 gal"
+        },
+        {
+          "specification": "Counterweight Ground Clearance",
+          "details": "17\""
+        }
+      ]
+    },
+    {
+      "slug": "rippa_r18_pro",
+      "name": "Rippa R18 PRO",
+      "tonnage": "1.8 Ton",
+      "power": "15.2 kW",
+      "features": [
+        "Professional grade",
+        "Advanced boom control",
+        "All-day comfort"
+      ],
+      "specs": {
+        "depth": "2.7m",
+        "reach": "4.6m",
+        "width": "1.45m"
+      },
+      "image": "/products/rippa_r18_pro/IMG_7815.jpg",
+      "description": "",
+      "detailedSpecs": []
+    },
+    {
+      "slug": "rippa_r22_pro",
+      "name": "Rippa R22 PRO",
+      "tonnage": "2.2 Ton",
+      "power": "18.0 kW",
+      "features": [
+        "Most popular model",
+        "Maximum versatility",
+        "Heavy-duty performance"
+      ],
+      "specs": {
+        "depth": "2.8m",
+        "reach": "4.8m",
+        "width": "1.5m"
+      },
+      "image": "/products/rippa_r22_pro/IMG_7836.jpg",
+      "description": "",
+      "detailedSpecs": []
+    },
+    {
+      "slug": "rippa_32_pro",
+      "name": "Rippa R32 PRO",
+      "tonnage": "3.2 Ton",
+      "power": "19.5 kW",
+      "features": [
+        "Maximum digging force",
+        "Cast swing boom",
+        "All-terrain capable"
+      ],
+      "specs": {
+        "depth": "3.2m",
+        "reach": "5.2m",
+        "width": "1.7m"
+      },
+      "image": "/products/rippa_32_pro/IMG_7856.jpg",
+      "description": "",
+      "detailedSpecs": []
+    }
+  ],
+  "modelsPage": {
+    "hero": {
+      "badge": "TOP 3 MOST POPULAR MODELS",
+      "title": "Our Most Popular",
+      "titleHighlight": "Excavator Models",
+      "subtitle": "Discover the three Rippa excavators that contractors across the Pacific Northwest trust most for their projects."
+    },
+    "featuredModels": [
+      {
+        "slug": "rippa_r13_pro",
+        "tagline": "The Perfect Entry to Professional Grade",
+        "description": "Ideal for contractors seeking compact access with professional-grade performance. Features expandable tracks and enhanced hydraulics.",
+        "idealFor": [
+          "Landscaping professionals",
+          "Small excavation companies",
+          "Residential contractors",
+          "Utility work"
+        ]
+      },
+      {
+        "slug": "rippa_r22_pro",
+        "tagline": "Our Most Popular & Versatile Model",
+        "description": "The bestselling choice for contractors who need maximum versatility. Perfect balance of power, reach, and maneuverability for diverse applications.",
+        "idealFor": [
+          "Professional contractors",
+          "Municipal work",
+          "Commercial projects",
+          "Rental fleets"
+        ]
+      },
+      {
+        "slug": "rippa_32_pro",
+        "tagline": "Maximum Power for Demanding Projects",
+        "description": "Our flagship heavy-duty excavator delivering maximum digging force and all-terrain capability for the most demanding applications.",
+        "idealFor": [
+          "Large excavation companies",
+          "Site development",
+          "Deep trenching",
+          "Commercial construction"
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Explore Our Complete Lineup",
+      "subtitle": "From ultra-compact 1.0-ton models to heavy-duty 3.2-ton excavators—we have the perfect machine for every application."
+    }
+  },
+  "quotePage": {
+    "hero": {
+      "badge": "FREE CONSULTATION",
+      "title": "Get Your Custom Quote",
+      "subtitle": "Fill out the form below and we'll provide detailed pricing, specifications, and expert guidance within 24 hours."
+    },
+    "successMessage": {
+      "title": "Quote Request Submitted Successfully!",
+      "subtitle": "Thank you for your interest in Rippa mini excavators. We've received your request and will contact you within 24 hours with:",
+      "items": [
+        "Detailed pricing and specifications",
+        "Financing options (if applicable)",
+        "Answers to your specific questions",
+        "Demo scheduling availability"
+      ]
+    }
+  }
+}
